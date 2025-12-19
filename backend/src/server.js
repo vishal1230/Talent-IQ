@@ -12,7 +12,7 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 // Credentials:true is needed to accept cookies from the frontend
-app.use(cors({origin:ENV_ClIENT_URL,credentials:true}));
+app.use(cors({origin:true,credentials:true}));
 
 app.use("/api/inngest",serve({client:inngest,functions}))
 
